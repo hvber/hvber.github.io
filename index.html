@@ -1,14 +1,114 @@
-<html>
-  <head>
-    <title>sad v2</title>
-    </head>
-  <body>
-    <form action="https://formspree.io/f/mzbkazqj" method="POST">
-                <input type="text" name="name">
-                <input type="email" name="_replyto">
-                <input type="text" name="_subject">
-                <textarea name="message"></textarea>
-                <input type="submit" value="send">
-            </form>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freelancer. Frontend and Backend Dev. I can make a website for you!">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>HVBER | My portfolio</title>
+</head>
+
+<body>
+    <nav class="flex-row">
+        <div id="background"></div>
+        <div class="menu flex-column">
+            <ul class="menu-list flex-column">
+                <li><a href="#home" class="menu-link">Home</a></li>
+                <li><a href="#about" class="menu-link">About me</a></li>
+                <li><a href="#myprojects" class="menu-link">My Projects</a></li>
+                <li><a href="#contact" class="menu-link">Contact</a></li>
+            </ul>
+            <div class="socials flex-row">
+                <a href="https://instagram.com/sebekkhaber/" target="_blank" class="social"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://facebook.com/" target="_blank" class="social"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://github.com/hvber" target="_blank" class="social"><i
+                        class="fa fa-github-square"></i></a>
+                <a href="https://twitter.com/hvber01" target="_blank" class="social"><i
+                        class="fa fa-twitter-square"></i></a>
+            </div>
+        </div>
+        <div id="hamburger" class="flex-column">
+            <span class="line-top"></span>
+            <span class="line-short"></span>
+            <span class="line-bottom"></span>
+        </div>
+        <a href="https://hvber.github.io/" class="logo">HVBER</a>
+    </nav>
+
+    <main>
+        <section class="about section flex-row" id="home">
+            <img src="img/undraw_web_developer_p3e5.svg" alt="Sitting web developer" class="illustration">
+            <div class="half flex-column">
+                <div class="flex-column">
+                    <img src="img/me.jpg" alt="My profile picture" class="profile-picture">
+                    <div class="name bold">Sebastian Haber</div>
+                    <div class="desc thin">Full-Stack Developer</div>
+                </div>
+                <div class="center">
+                    <h2>Hi, I'm Sebastian,</h2>
+                    <p>a freelance <i>front-end</i> and <i>back-end</i> developer.</p>
+                </div>
+            </div>
+        </section>
+        <section id="myprojects" class="section">
+            <h1>My Projects</h1>
+            <div class="projects flex-row">
+                <div class="web">
+                    <a href="https://google.com/" target="_blank"><img src="img/cleanlux.png" alt="CleanLux"></a>
+                    <div class="desc flex-column">
+                        <span class="bold">CleanLux</span>
+                        <span class="thin">Cleaning Company from Edi</span>
+                        <span class="small thin">Created from scratch, unofficially applied.</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="contact" class="section">
+            <h1>Contact</h1>
+            <div class="flex-row">
+                <form action="https://formspree.io/f/mzbkazqj" method="POST" class="flex-column half">
+                    <input type="text" name="name">
+                    <input type="email" name="_replyto">
+                    <input type="text" name="_subject">
+                    <textarea name="message" ></textarea>
+                    <input type="submit" value="Send" class="send-btn bold">
+                    <p class="vsmall">Or send e-mail manually: <span class="bold">hvber01@gmail.com</span></p>
+                </form>
+                <img src="img/undraw_Letter_re_8m03.svg" alt="Throwing a letter" class="illustration">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer section flex-column">
+            <div class="logo white">HVBER</div>
+            <ul class="menu-list flex-row small">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#myprojects">My Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="socials flex-row">
+                <a href="https://instagram.com/sebekkhaber/" target="_blank" class="social"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://facebook.com/" target="_blank" class="social"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://github.com/hvber" target="_blank" class="social"><i
+                        class="fa fa-github-square"></i></a>
+                <a href="https://twitter.com/hvber01" target="_blank" class="social"><i
+                        class="fa fa-twitter-square"></i></a>
+            </div>
+            <p class="vsmall">&copy; Sebastian Haber 2020</p>
+        </div>
+    </footer>
+
+
+    <script src="https://use.fontawesome.com/477ef4dedb.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
 </html>

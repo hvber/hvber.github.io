@@ -5,10 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: 'K2D', sans-serif;
-    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -168,7 +171,7 @@ nav .menu {
     background-color: #222;
     color: #efefef;
     position: fixed;
-    z-index: -1;
+    z-index: 3;
     top: 0;
     left: 0;
     -webkit-transform: translateX(-100%);
@@ -220,8 +223,12 @@ nav .menu.active {
     transform: translateX(0);
 }
 
+main #contact img.illustration {
+    width: 100%;
+}
+
 main .section {
-    padding: 0 3% 50px 3%;
+    padding: 50px 3% 50px 3%;
     max-width: 1440px;
     margin: 1rem auto;
 }
@@ -230,14 +237,32 @@ main .section h1 {
     padding: 1rem 0;
 }
 
-main .projects {
+main img.illustration {
+    height: 360px;
+}
+
+main img.profile-picture {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+}
+
+.projects {
     overflow-x: auto;
     -webkit-box-pack: left;
     -ms-flex-pack: left;
     justify-content: left;
+    padding: 1rem 0;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
 }
 
-main .projects .web a {
+.projects .web {
+    margin-right: 1rem;
+}
+
+.projects .web a {
     border-radius: 8px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -246,38 +271,29 @@ main .projects .web a {
     width: 300px;
 }
 
-main .projects .web a img {
+.projects .web a img {
+    -o-object-fit: cover;
+    object-fit: cover;
     width: 300px;
-    max-height: 100%;
+    height: 100%;
     -webkit-transition: -webkit-transform .2s ease-in-out;
     transition: -webkit-transform .2s ease-in-out;
     transition: transform .2s ease-in-out;
     transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
 }
 
-main .projects .web .desc {
+.projects .web .desc {
     width: 300px;
 }
 
-main .projects .web a:hover > img {
+.projects .web a:hover > img {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-main .half {
+.half {
     width: 100%;
     height: 360px;
-}
-
-main img.illustration {
-    width: 100%;
-    height: 360px;
-}
-
-main img.profile-picture {
-    width: 128px;
-    height: 128px;
-    border-radius: 100%;
 }
 
 input,
@@ -291,8 +307,16 @@ h1 {
     margin-bottom: 50px;
 }
 
+#contact {
+    margin-bottom: 50px;
+}
+
 form {
     width: 400px;
+}
+
+form div {
+    margin-bottom: 1rem;
 }
 
 form input[type=text],
@@ -307,6 +331,8 @@ form textarea {
     color: #222;
     border: 0;
     border-bottom: 2px solid #06f;
+    -webkit-transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
 }
 
 form textarea {
@@ -320,7 +346,8 @@ form input[type=email] {
 
 form .send-btn {
     width: 144px;
-    height: 45px;
+    padding: 10px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     background-color: #06f;
     color: #efefef;
@@ -360,4 +387,44 @@ footer ul.menu-list {
     width: 300px;
     list-style: none;
     text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    img.illustration {
+        display: none;
+    }
+
+    .half {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    form input[type=text],
+    form input[type=email],
+    form textarea {
+        width: 300px;
+    }
+
+    nav .menu {
+        width: 100%;
+    }
+
+    .projects .web a {
+        height: 100px;
+        width: 200px;
+    }
+
+    .projects .web img {
+        width: 100%;
+    }
+
+    .projects .web .desc {
+        width: 200px;
+    }
+
+    .projects .web .desc .small {
+        font-size: 12px;
+    }
 }

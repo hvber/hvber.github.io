@@ -13,11 +13,11 @@
 </head>
 
 <body>
+    <div id="about"></div>
     <nav class="flex-row">
         <div id="background"></div>
         <div class="menu flex-column">
             <ul class="menu-list flex-column">
-                <li><a href="#home" class="menu-link">Home</a></li>
                 <li><a href="#about" class="menu-link">About me</a></li>
                 <li><a href="#myprojects" class="menu-link">My Projects</a></li>
                 <li><a href="#contact" class="menu-link">Contact</a></li>
@@ -41,8 +41,8 @@
     </nav>
 
     <main>
-        <section class="about section flex-row" id="home">
-            <img src="img/undraw_web_developer_p3e5.svg" alt="Sitting web developer" class="illustration">
+        <section class="about section flex-row">
+            <img src="img/undraw_web_developer_p3e5.svg" alt="Web developer" class="illustration">
             <div class="half flex-column">
                 <div class="flex-column">
                     <img src="img/me.jpg" alt="My profile picture" class="profile-picture">
@@ -72,15 +72,27 @@
         <section id="contact" class="section">
             <h1>Contact</h1>
             <div class="flex-row">
-                <form action="https://formspree.io/f/mzbkazqj" method="POST" class="flex-column half">
-                    <input type="text" name="name">
-                    <input type="email" name="_replyto">
-                    <input type="text" name="_subject">
-                    <textarea name="message" ></textarea>
+                <form action="https://formspree.io/f/mzbkazqj" method="POST" class="flex-column half" autocomplete="off">
+                    <div>
+                        <p class="small">Name</p>
+                        <input type="text" name="name">
+                    </div>
+                    <div>
+                        <p class="small">E-mail</p>
+                        <input type="email" name="_replyto">
+                    </div>
+                    <div>
+                        <p class="small">Subject</p>
+                        <input type="text" name="_subject">
+                    </div>
+                    <div>
+                        <p class="small">Message</p>
+                        <textarea name="message"></textarea>
+                    </div>
                     <input type="submit" value="Send" class="send-btn bold">
                     <p class="vsmall">Or send e-mail manually: <span class="bold">hvber01@gmail.com</span></p>
                 </form>
-                <img src="img/undraw_Letter_re_8m03.svg" alt="Throwing a letter" class="illustration">
+                <img src="img/undraw_Letter_re_8m03.svg" alt="Letter" class="illustration">
             </div>
         </section>
     </main>

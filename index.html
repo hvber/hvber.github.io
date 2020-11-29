@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>hvber | Front-End Developer</title>
 </head>
 
@@ -43,14 +43,14 @@
     <main>
         <section class="about section flex-row">
             <img src="img/undraw_web_developer_p3e5.svg" alt="Web developer" class="illustration">
-            <div class="half flex-column about-content">
+            <div class="half flex-column about-content" data-aos="fade-left">
                 <div class="flex-column">
                     <img src="img/me.jpg" alt="My profile picture" class="profile-picture">
                     <div class="name bold">Sebastian Haber</div>
                     <div class="desc thin">Front-End Developer</div>
                 </div>
                 <div class="aboutme center">
-                    <h2>Hi, I'm Sebastian,</h2>
+                    <h3>Hi, I'm Sebastian,</h3>
                     <p>a freelance <i>front-end</i> developer.</p>
                     <p>Scroll down to check my portfolio.</p>
                 </div>
@@ -58,7 +58,7 @@
         </section>
         <section id="myprojects" class="section">
             <h1>My Projects</h1>
-            <div class="projects flex-row">
+            <div class="projects flex-row" data-aos="fade-right">
                 <div class="web">
                     <a href="http://shrex.5v.pl" target="_blank"><img src="img/shrex.png" alt="Shrex"></a>
                     <div class="desc flex-column">
@@ -73,7 +73,10 @@
         <section id="contact" class="section">
             <h1>Contact</h1>
             <div class="flex-row">
-                <form action="https://formspree.io/f/mzbkazqj" method="POST" class="flex-column half" autocomplete="off">
+                <form action="https://formspree.io/f/mzbkazqj" method="POST"
+                    class="flex-column half"
+                    autocomplete="off"
+                    data-aos="fade-right">
                     <div>
                         <p class="small">Name</p>
                         <input type="text" name="name">
@@ -93,7 +96,9 @@
                     <input type="submit" value="Send" class="send-btn bold">
                     <p class="vsmall">Or send e-mail manually: <span class="bold">hvber01@gmail.com</span></p>
                 </form>
-                <img src="img/undraw_Letter_re_8m03.svg" alt="Letter" class="illustration">
+                <img src="img/undraw_Letter_re_8m03.svg" alt="Letter"
+                class="illustration"
+                data-aos="fade-left">
             </div>
         </section>
     </main>
@@ -121,6 +126,8 @@
 
 
     <script src="https://use.fontawesome.com/477ef4dedb.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/hamburger.js"></script>
 </body>
 

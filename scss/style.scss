@@ -3,6 +3,7 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    border-radius: 0;
 }
 
 $dark: #222;
@@ -266,7 +267,6 @@ main {
     .web {
         margin-right: 1rem;
         a {
-            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .5);
             overflow: hidden;
             height: 200px;
